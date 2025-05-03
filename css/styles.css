@@ -7,9 +7,6 @@
 
 body {
     font-family: 'Arial', sans-serif;
-    background-image: url('../img/pexels-photo-5614141.jpeg'); /* Imagem de fundo */
-    background-size: cover;
-    background-position: center;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -113,4 +110,18 @@ h2 {
     .login-btn {
         font-size: 1rem;
     }
+}
+
+/* Imagem de fundo para a página de login */
+.login-bg {
+    background-image: url('../img/pexels-photo-5614141.jpeg');
+    background-size: cover;
+    background-position: center;
+}
+
+/* Imagem de fundo para a página de signup */
+.signup-bg {
+    background-image: url('../img/pexels-photo-6153078.jpeg');
+    background-size: cover;
+    background-position: center;
 }
