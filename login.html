@@ -22,11 +22,25 @@
                 <button type="submit" class="login-btn">Entrar</button>
             </form>
             <div class="footer-links">
-                <a href="#">Esqueceu a senha?</a>
+                <a href="#" id="forgotPasswordLink">Esqueceu a senha?</a>
                 <a href="signup.html">Cadastrar-se</a>
             </div>
         </div>
     </div>
+
+    <!-- Modal de Recuperação de Senha -->
+    <div id="forgotPasswordModal" class="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Recuperar Senha</h2>
+            <p>Digite seu nome de usuário ou email:</p>
+            <form id="recoverPasswordForm">
+                <input type="text" id="recoverEmailOrUsername" placeholder="Nome de usuário ou email" required>
+                <button type="submit" class="login-btn">Enviar</button>
+            </form>
+        </div>
+    </div>
+
     <script src="js/scripts.js"></script>
 </body>
 </html>

@@ -1,22 +1,30 @@
-document.getElementById("signupForm").addEventListener("submit", function (e) {
-    e.preventDefault(); // Previne o comportamento padrão do formulário
-    
-    const username = document.getElementById("username").value;
-    const email = document.getElementById("email").value;
-    const password = document.getElementById("password").value;
-    const confirmPassword = document.getElementById("confirmPassword").value;
+// Abrir o modal de recuperação de senha
+document.getElementById("forgotPasswordLink").addEventListener("click", function(e) {
+    e.preventDefault(); // Previne o comportamento padrão do link
+    document.getElementById("forgotPasswordModal").style.display = "block";
+});
 
-    // Simulação de validação de cadastro
-    if (password !== confirmPassword) {
-        alert("As senhas não coincidem.");
-        return;
+// Fechar o modal de recuperação de senha ao clicar no "x"
+document.getElementById("closeModal").addEventListener("click", function() {
+    document.getElementById("forgotPasswordModal").style.display = "none";
+});
+
+// Fechar o modal clicando fora dele
+window.onclick = function(event) {
+    if (event.target === document.getElementById("forgotPasswordModal")) {
+        document.getElementById("forgotPasswordModal").style.display = "none";
     }
+};
 
-    if (username && email && password) {
-        alert("Cadastro realizado com sucesso!");
-        // Redireciona para o login ou dashboard
-        // window.location.href = "/login";
+// Lógica de envio do formulário (pode ser personalizada com back-end)
+document.getElementById("recoverPasswordForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const emailOrUsername = document.getElementById("recoverEmailOrUsername").value;
+
+    if (emailOrUsername) {
+        alert("Instruções de recuperação de senha enviadas para: " + emailOrUsername);
+        document.getElementById("forgotPasswordModal").style.display = "none"; // Fechar o modal após envio
     } else {
-        alert("Por favor, preencha todos os campos.");
+        alert("Por favor, preencha o nome de usuário ou email.");
     }
 });

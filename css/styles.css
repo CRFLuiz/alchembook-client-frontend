@@ -93,6 +93,73 @@ h2 {
     text-decoration: underline;
 }
 
+/* Modal - Estilos */
+.modal {
+    display: none; /* Inicialmente escondido */
+    position: fixed;
+    z-index: 1; /* Fica sobre o conteúdo */
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.4); /* Fundo escuro com transparência */
+}
+
+.modal-content {
+    background-color: white;
+    margin: 15% auto;
+    padding: 20px;
+    border-radius: 8px;
+    width: 300px;
+    text-align: center;
+}
+
+.close {
+    color: #aaa;
+    font-size: 1.5rem;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+.modal h2 {
+    margin-bottom: 20px;
+}
+
+.modal input {
+    width: 80%;
+    padding: 10px;
+    margin-top: 5px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+}
+
+.modal button {
+    margin-top: 15px;
+    width: 80%;
+}
+
+/* Imagem de fundo para a página de login */
+.login-bg {
+    background-image: url('/img/pexels-photo-5614141.jpeg'); /* Corrigido o caminho */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Imagem de fundo para a página de signup */
+.signup-bg {
+    background-image: url('/img/pexels-photo-6153078.jpeg'); /* Corrigido o caminho */
+    background-size: cover;
+    background-position: center;
+}
+
 /* Responsividade */
 @media (max-width: 600px) {
     .login-box {
@@ -110,18 +177,4 @@ h2 {
     .login-btn {
         font-size: 1rem;
     }
-}
-
-/* Imagem de fundo para a página de login */
-.login-bg {
-    background-image: url('../img/pexels-photo-5614141.jpeg');
-    background-size: cover;
-    background-position: center;
-}
-
-/* Imagem de fundo para a página de signup */
-.signup-bg {
-    background-image: url('../img/pexels-photo-6153078.jpeg');
-    background-size: cover;
-    background-position: center;
 }
